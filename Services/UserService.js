@@ -7,7 +7,7 @@ class UserService {
     }
 
     async getUserByID(userId){
-        return await Client.findByPK(userId);
+        return await Client.findByPk(userId);
     }
 
     async createUser(userData) {
