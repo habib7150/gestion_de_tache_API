@@ -4,7 +4,7 @@ const UserController = require('./controllers/UserController');
 
 const router = express.Router();
 
-router.get("/",(request,result) => {UserController.authontificateUser(request,result);});
+router.get("/",(request,result) => {UserController.getAllUsers(request,result);});
 
 router.post("/:userId",(request,result) => {UserController.getUserByID(request,result);});
 
