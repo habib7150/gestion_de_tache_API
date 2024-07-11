@@ -5,7 +5,7 @@ class CommentService {
         return await Comment.create(commentData);
     }
 
-    async getCommentsByTask(taskId) {
+    async getCommentsByTaskId(taskId) {
         return await Comment.findAll({ where: { taskId } });
     }
 }
