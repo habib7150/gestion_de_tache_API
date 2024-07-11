@@ -3,8 +3,13 @@ const User = require('./models/User');
 class UserService {
 
     async getAllUsers() {
-        return await User.finfAll();
+        return await User.findAll();
     }
+
+    async getUserByEmail(email){
+        return await User.findOne({ where: { email: email } });
+    }
+
 
     async getUserByID(userId){
         return await Client.findByPk(userId);
